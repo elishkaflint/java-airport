@@ -1,6 +1,7 @@
 package airport;
 
 import java.util.ArrayList;
+import java.lang.RuntimeException;
 
 public class Airport {
 
@@ -13,7 +14,11 @@ public class Airport {
     }
 
     public void land(String plane) {
-        this.planes.add(plane);
+        if(this.planes.size() == this.capacity) {
+            throw new RuntimeException("Airport is full!");
+        } else {
+            this.planes.add(plane);
+        }
     }
 
     public ArrayList getPlanes() {
