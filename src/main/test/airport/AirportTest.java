@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.rules.ExpectedException;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class AirportTest {
 
@@ -20,6 +20,13 @@ public class AirportTest {
     public void testLand() {
         airport.land("plane");
         assertTrue(airport.planes.contains("plane"));
+    }
+
+    @Test
+    public void testTakeOff() {
+        airport.land("plane");
+        airport.takeOff("plane");
+        assertFalse(airport.planes.contains("plane"));
     }
 
     @Rule
