@@ -51,4 +51,13 @@ public class AirportTest {
         airport.takeOff(plane);
     }
 
+    @Test
+    public void testTakeOffWhenPlaneIsGroundedRaisesError() {
+        exceptionRule.expect(RuntimeException.class);
+        exceptionRule.expectMessage("Plane is grounded");
+        airport.land(plane);
+        airport.ground(plane);
+        airport.takeOff(plane);
+    }
+
 }
