@@ -13,6 +13,10 @@ public class Airport {
         this.capacity = capacity;
     }
 
+    public void takeOff(String plane) {
+        this.planes.remove(plane);
+    }
+
     public void land(String plane) {
         if(this.planes.size() == this.capacity) {
             throw new RuntimeException("Airport is full!");
