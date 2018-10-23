@@ -28,8 +28,4 @@ public class Airport {
             this.planes.add(plane);
         }
     }
-
-    public ArrayList getPlanes() {
-        return this.planes;
-    }
 }
