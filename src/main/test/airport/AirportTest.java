@@ -39,4 +39,11 @@ public class AirportTest {
         for(int i = 0; i <= airport.capacity; i++) { airport.land("plane"); };
     }
 
+    @Test
+    public void testTakeOffWhenNoPlaneRaisesError() {
+        exceptionRule.expect(RuntimeException.class);
+        exceptionRule.expectMessage("No plane to take off!");
+        airport.takeOff("plane");
+    }
+
 }
