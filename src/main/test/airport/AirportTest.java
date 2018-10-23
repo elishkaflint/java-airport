@@ -10,23 +10,25 @@ import static org.junit.Assert.*;
 public class AirportTest {
 
     Airport airport;
+    Plane plane;
 
     @Before
     public void initialize() {
         airport = new Airport(20);
+        plane = new Plane();
     }
 
     @Test
     public void testLand() {
-        airport.land("plane");
-        assertTrue(airport.planes.contains("plane"));
+        airport.land(plane);
+        assertTrue(airport.planes.contains(plane));
     }
 
     @Test
     public void testTakeOff() {
-        airport.land("plane");
-        airport.takeOff("plane");
-        assertFalse(airport.planes.contains("plane"));
+        airport.land(plane);
+        airport.takeOff(plane);
+        assertFalse(airport.planes.contains(plane));
     }
 
     @Rule
@@ -36,14 +38,17 @@ public class AirportTest {
     public void testTooManyLandingsRaisesError() {
         exceptionRule.expect(RuntimeException.class);
         exceptionRule.expectMessage("Airport is full!");
-        for(int i = 0; i <= airport.capacity; i++) { airport.land("plane"); };
+        for(int i = 0; i <= airport.capacity; i++) {
+            Plane plane = new Plane();
+            airport.land(plane);
+        }
     }
 
     @Test
     public void testTakeOffWhenNoPlaneRaisesError() {
         exceptionRule.expect(RuntimeException.class);
         exceptionRule.expectMessage("No plane to take off!");
-        airport.takeOff("plane");
+        airport.takeOff(plane);
     }
 
 }

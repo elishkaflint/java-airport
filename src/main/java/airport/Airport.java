@@ -13,7 +13,7 @@ public class Airport {
         this.capacity = capacity;
     }
 
-    public void takeOff(String plane) {
+    public void takeOff(Plane plane) {
         if (this.planes.isEmpty()) {
             throw new RuntimeException("No plane to take off!");
         } else {
@@ -21,7 +21,7 @@ public class Airport {
         }
     }
 
-    public void land(String plane) {
+    public void land(Plane plane) {
         if(this.planes.size() == this.capacity) {
             throw new RuntimeException("Airport is full!");
         } else {
