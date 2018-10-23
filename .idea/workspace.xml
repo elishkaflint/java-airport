@@ -7,7 +7,51 @@
     <option name="height" value="913" />
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540299964861" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540300064294" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+  </component>
+  <component name="RunManager" selected="JUnit.AppTest">
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="airport" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="airport.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="airport" />
+      <option name="MAIN_CLASS_NAME" value="airport.AppTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testConcatAndConvertString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="airport" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="airport.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="airport" />
+      <option name="MAIN_CLASS_NAME" value="airport.AppTest" />
+      <option name="METHOD_NAME" value="testConcatAndConvertString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.AppTest.testConcatAndConvertString" />
+      <item itemvalue="JUnit.AppTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.AppTest.testConcatAndConvertString" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="masterDetails">
     <states>

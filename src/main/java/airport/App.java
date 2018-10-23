@@ -1,10 +1,5 @@
 package airport;
 
-/**
- * Hello world!
- *
- */
-
 public class App
 {
     public String concatAndConvertString(String str1, String str2){
