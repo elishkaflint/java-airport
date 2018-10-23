@@ -14,7 +14,11 @@ public class Airport {
     }
 
     public void takeOff(String plane) {
-        this.planes.remove(plane);
+        if (this.planes.isEmpty()) {
+            throw new RuntimeException("No plane to take off!");
+        } else {
+            this.planes.remove(plane);
+        }
     }
 
     public void land(String plane) {
