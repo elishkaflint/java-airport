@@ -5,9 +5,11 @@ import java.util.ArrayList;
 public class Airport {
 
     ArrayList planes;
+    int capacity;
 
-    public Airport() {
+    public Airport(int capacity) {
         this.planes = new ArrayList();
+        this.capacity = capacity;
     }
 
     public void land(String plane) {
