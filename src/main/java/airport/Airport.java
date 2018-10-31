@@ -28,4 +28,10 @@ public class Airport {
             this.planes.add(plane);
         }
     }
+
+    // TODO work out how to get grounded plane into the array
+    public void ground(Plane plane) {
+        int index = this.planes.indexOf(plane);
+
+    }
 }
